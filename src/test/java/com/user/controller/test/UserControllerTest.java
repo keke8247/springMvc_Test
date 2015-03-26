@@ -1,13 +1,10 @@
 package com.user.controller.test;
 
-import static org.junit.Assert.*;
-
 import javax.annotation.Resource;
 
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
-import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.transaction.TransactionConfiguration;
@@ -15,8 +12,6 @@ import org.springframework.transaction.annotation.Transactional;
 
 import com.user.entity.UserBean;
 import com.user.logic.UserHandler;
-import com.user.logic.impl.UserHandlerImpl;
-import com.user.util.ApplicationContextHelper;
 
 @Transactional
 @TransactionConfiguration(transactionManager = "transactionManager",defaultRollback = true)
