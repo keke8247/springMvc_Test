@@ -29,12 +29,12 @@ public class UserControllerTest {
 	public void testSaveUser() {
 		UserBean user = new UserBean();
 		user.setUser_id("sdfdasgga12rdg");
-		user.setUser_name("ÕÅÈı");
+		user.setUser_name("å¼ ä¸‰");
 		user.setUser_age(23);
 		user.setUser_sex(1);
 		user.setUser_tel("1523734292");
-		user.setUser_add("º¼Öİ");
-		user.setUser_bz("ÎŞ");
+		user.setUser_add("æ­å·");
+		user.setUser_bz("æ— ");
 		userHandler.saveUser(user);
 	}
 

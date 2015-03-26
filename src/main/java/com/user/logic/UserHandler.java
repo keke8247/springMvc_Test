@@ -7,42 +7,42 @@ import com.user.entity.UserBean;
 public interface UserHandler {
 	
 	/**
-	 * 保存人员信息.
+	 * 淇濆瓨浜哄憳淇℃伅.
 	 *
-	 * @param user the 人员对象
-	 * @return the 人员对象
+	 * @param user the 浜哄憳瀵硅薄
+	 * @return the 浜哄憳瀵硅薄
 	 */
 	public UserBean saveUser(UserBean user);
 	
 	/**
-	 * 查询人员列表.
+	 * 鏌ヨ浜哄憳鍒楄〃.
 	 *
-	 * @param cxmc the 查询名称
-	 * @return the 返回列表
+	 * @param cxmc the 鏌ヨ鍚嶇О
+	 * @return the 杩斿洖鍒楄〃
 	 */
 	public List<UserBean> loadUserList(String cxmc);
 	
 	/**
-	 * 删除人员信息.
+	 * 鍒犻櫎浜哄憳淇℃伅.
 	 *
-	 * @param userId the 用户ID
-	 * @return the 返回删除状态码
+	 * @param userId the 鐢ㄦ埛ID
+	 * @return the 杩斿洖鍒犻櫎鐘舵�佺爜
 	 */
 	public int deleteUser(String userId);
 	
 	/**
-	 * 根据userID查询人员信息.
+	 * 鏍规嵁userID鏌ヨ浜哄憳淇℃伅.
 	 *
-	 * @param userId the 人员ID
-	 * @return the 返回人员对象
+	 * @param userId the 浜哄憳ID
+	 * @return the 杩斿洖浜哄憳瀵硅薄
 	 */
 	public UserBean getUser(String userId);
 	
 	/**
-	 * 修改人员信息.
+	 * 淇敼浜哄憳淇℃伅.
 	 *
-	 * @param user the 人员对象
-	 * @return the 人员对象
+	 * @param user the 浜哄憳瀵硅薄
+	 * @return the 浜哄憳瀵硅薄
 	 */
 	public int updateUser(UserBean user);
 }

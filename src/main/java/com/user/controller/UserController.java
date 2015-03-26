@@ -21,7 +21,7 @@ import com.user.logic.UserHandler;
 
 // TODO: Auto-generated Javadoc
 /**
- * ÓÃ»§¹ÜÀí¿ØÖÆÀà
+ * ç”¨æˆ·ç®¡ç†æ§åˆ¶ç±»
  * @author wdk
  * 2015-03-24.
  */
@@ -38,7 +38,7 @@ public class UserController extends MultiActionController{
 	}
 
 	/**
-	 * ÓÃ»§¹ÜÀíÒ³Ãæ.
+	 * ç”¨æˆ·ç®¡ç†é¡µé¢.
 	 *
 	 * @param request the request
 	 * @param response the response
@@ -51,7 +51,7 @@ public class UserController extends MultiActionController{
 	}
 	
 	/**
-	 * ±£´æÈËÔ±ĞÅÏ¢.
+	 * ä¿å­˜äººå‘˜ä¿¡æ¯.
 	 *
 	 * @param request the request
 	 * @param response the response
@@ -60,7 +60,7 @@ public class UserController extends MultiActionController{
 	public void saveUser(HttpServletRequest request,HttpServletResponse response) throws IOException{
 		response.setContentType("text/html;charset=utf-8");
 		PrintWriter out = response.getWriter();
-		jsonObj.clear();//ÏÈÇå¿Õjson¶ÔÏó
+		jsonObj.clear();//å…ˆæ¸…ç©ºjsonå¯¹è±¡
 		UserBean userBean = new UserBean();
 		String userID = request.getParameter("userId");
 		userBean.setUser_name(request.getParameter("xm"));
@@ -74,9 +74,9 @@ public class UserController extends MultiActionController{
 			userBean.setUser_id(userID);
 			try {
 				this.userHandler.updateUser(userBean);
-				jsonObj.put("message", "ĞŞ¸Ä³É¹¦!");
+				jsonObj.put("message", "ä¿®æ”¹æˆåŠŸ!");
 			} catch (Exception e) {
-				jsonObj.put("message", "ĞŞ¸ÄÊ§°Ü!");
+				jsonObj.put("message", "ä¿®æ”¹å¤±è´¥!");
 				e.printStackTrace();
 			}
 		}else{
@@ -84,9 +84,9 @@ public class UserController extends MultiActionController{
 			userBean.setUser_id(uuid);
 			try {
 				this.userHandler.saveUser(userBean);
-				jsonObj.put("message", "±£´æ³É¹¦!");
+				jsonObj.put("message", "ä¿å­˜æˆåŠŸ!");
 			} catch (Exception e) {
-				jsonObj.put("message", "±£´æÊ§°Ü!");
+				jsonObj.put("message", "ä¿å­˜å¤±è´¥!");
 				e.printStackTrace();
 			}
 		}
@@ -96,7 +96,7 @@ public class UserController extends MultiActionController{
 	}
 	
 	/**
-	 * ²éÑ¯ÈËÔ±ÁĞ±í.
+	 * æŸ¥è¯¢äººå‘˜åˆ—è¡¨.
 	 *
 	 * @param request the request
 	 * @param response the response
@@ -105,17 +105,17 @@ public class UserController extends MultiActionController{
 	public void loadUserList(HttpServletRequest request,HttpServletResponse response) throws IOException{
 		response.setContentType("text/html;charset=utf-8");
 		PrintWriter out = response.getWriter();
-		jsonObj.clear();//ÏÈÇå¿Õjson¶ÔÏó
+		jsonObj.clear();//å…ˆæ¸…ç©ºjsonå¯¹è±¡
 		String cxmc = request.getParameter("cxmc");
 		List<UserBean> userList = this.userHandler.loadUserList(cxmc);
 		JSONArray jsArray =  new JSONArray();
-		jsArray = jsArray.fromObject(userList);//list×ª»»Îªjsonarray
+		jsArray = jsArray.fromObject(userList);//listè½¬æ¢ä¸ºjsonarray
 		jsonObj.put("userList", jsArray);
 		out.println(jsonObj);
 	}
 	
 	/**
-	 * É¾³ıÈËÔ±ĞÅÏ¢.
+	 * åˆ é™¤äººå‘˜ä¿¡æ¯.
 	 *
 	 * @param request the request
 	 * @param response the response
@@ -124,19 +124,19 @@ public class UserController extends MultiActionController{
 	public void deleteUser(HttpServletRequest request,HttpServletResponse response) throws IOException{
 		response.setContentType("text/html;charset=utf-8");
 		PrintWriter out = response.getWriter();
-		jsonObj.clear();//ÏÈÇå¿Õjson¶ÔÏó
+		jsonObj.clear();//å…ˆæ¸…ç©ºjsonå¯¹è±¡
 		String userId = request.getParameter("userId");
 		int deleteCode = this.userHandler.deleteUser(userId);
 		if(deleteCode == 1){
-			jsonObj.put("message", "É¾³ı³É¹¦!");
+			jsonObj.put("message", "åˆ é™¤æˆåŠŸ!");
 		}else{
-			jsonObj.put("message", "É¾³ıÊ§°Ü!");
+			jsonObj.put("message", "åˆ é™¤å¤±è´¥!");
 		}
 		out.println(jsonObj);
 	}
 	
 	/**
-	 * »ñÈ¡ÈËÔ±ĞÅÏ¢.
+	 * è·å–äººå‘˜ä¿¡æ¯.
 	 *
 	 * @param request the request
 	 * @param response the response
@@ -146,7 +146,7 @@ public class UserController extends MultiActionController{
 	public void getUser(HttpServletRequest request,HttpServletResponse response) throws IOException{
 		response.setContentType("text/html;charset=utf-8");
 		PrintWriter out = response.getWriter();
-		jsonObj.clear();//ÏÈÇå¿Õjson¶ÔÏó
+		jsonObj.clear();//å…ˆæ¸…ç©ºjsonå¯¹è±¡
 		String userId = request.getParameter("userId");
 		UserBean userBean = this.userHandler.getUser(userId);
 		jsonObj.put("userBean", userBean);

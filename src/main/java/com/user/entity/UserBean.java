@@ -1,5 +1,5 @@
 /*
- * ÊµÌåÀà
+ * å®ä½“ç±»
  */
 package com.user.entity;
 
@@ -7,7 +7,7 @@ import java.io.Serializable;
 
 // TODO: Auto-generated Javadoc
 /**
- * ÈËÔ±ĞÅÏ¢ÊµÌåÀà.
+ * äººå‘˜ä¿¡æ¯å®ä½“ç±».
  *
  * @author wdk.
  * 2015-03-25
@@ -17,25 +17,25 @@ public class UserBean implements Serializable{
 	/** The Constant serialVersionUID. */
 	private static final long serialVersionUID = 1L;
 	
-	/** ÈËÔ±ID. */
+	/** äººå‘˜ID. */
 	private String user_id;
 	
-	/** ÈËÔ±Ãû³Æ. */
+	/** äººå‘˜åç§°. */
 	private String user_name;
 	
-	/** ÈËÔ±ĞÔ±ğ. */
+	/** äººå‘˜æ€§åˆ«. */
 	private int user_sex; 
 	
-	/** ÈËÔ±µç»°. */
+	/** äººå‘˜ç”µè¯. */
 	private String user_tel;
 	
-	/** ÈËÔ±µØÖ·. */
+	/** äººå‘˜åœ°å€. */
 	private String user_add;
 	
-	/** ÈËÔ±ÄêÁä. */
+	/** äººå‘˜å¹´é¾„. */
 	private int user_age;
 	
-	/** ±¸×¢ĞÅÏ¢. */
+	/** å¤‡æ³¨ä¿¡æ¯. */
 	private String user_bz;
 	
 	/**
@@ -68,126 +68,126 @@ public class UserBean implements Serializable{
 	}
 
 	/**
-	 * Gets the ÈËÔ±ID.
+	 * Gets the äººå‘˜ID.
 	 *
-	 * @return the ÈËÔ±ID
+	 * @return the äººå‘˜ID
 	 */
 	public String getUser_id() {
 		return user_id;
 	}
 
 	/**
-	 * Sets the ÈËÔ±ID.
+	 * Sets the äººå‘˜ID.
 	 *
-	 * @param user_id the new ÈËÔ±ID
+	 * @param user_id the new äººå‘˜ID
 	 */
 	public void setUser_id(String user_id) {
 		this.user_id = user_id;
 	}
 
 	/**
-	 * Gets the ÈËÔ±Ãû³Æ.
+	 * Gets the äººå‘˜åç§°.
 	 *
-	 * @return the ÈËÔ±Ãû³Æ
+	 * @return the äººå‘˜åç§°
 	 */
 	public String getUser_name() {
 		return user_name;
 	}
 
 	/**
-	 * Sets the ÈËÔ±Ãû³Æ.
+	 * Sets the äººå‘˜åç§°.
 	 *
-	 * @param user_name the new ÈËÔ±Ãû³Æ
+	 * @param user_name the new äººå‘˜åç§°
 	 */
 	public void setUser_name(String user_name) {
 		this.user_name = user_name;
 	}
 
 	/**
-	 * Gets the ÈËÔ±ĞÔ±ğ.
+	 * Gets the äººå‘˜æ€§åˆ«.
 	 *
-	 * @return the ÈËÔ±ĞÔ±ğ
+	 * @return the äººå‘˜æ€§åˆ«
 	 */
 	public int getUser_sex() {
 		return user_sex;
 	}
 
 	/**
-	 * Sets the ÈËÔ±ĞÔ±ğ.
+	 * Sets the äººå‘˜æ€§åˆ«.
 	 *
-	 * @param user_sex the new ÈËÔ±ĞÔ±ğ
+	 * @param user_sex the new äººå‘˜æ€§åˆ«
 	 */
 	public void setUser_sex(int user_sex) {
 		this.user_sex = user_sex;
 	}
 
 	/**
-	 * Gets the ÈËÔ±µç»°.
+	 * Gets the äººå‘˜ç”µè¯.
 	 *
-	 * @return the ÈËÔ±µç»°
+	 * @return the äººå‘˜ç”µè¯
 	 */
 	public String getUser_tel() {
 		return user_tel;
 	}
 
 	/**
-	 * Sets the ÈËÔ±µç»°.
+	 * Sets the äººå‘˜ç”µè¯.
 	 *
-	 * @param user_tel the new ÈËÔ±µç»°
+	 * @param user_tel the new äººå‘˜ç”µè¯
 	 */
 	public void setUser_tel(String user_tel) {
 		this.user_tel = user_tel;
 	}
 
 	/**
-	 * Gets the ÈËÔ±µØÖ·.
+	 * Gets the äººå‘˜åœ°å€.
 	 *
-	 * @return the ÈËÔ±µØÖ·
+	 * @return the äººå‘˜åœ°å€
 	 */
 	public String getUser_add() {
 		return user_add;
 	}
 
 	/**
-	 * Sets the ÈËÔ±µØÖ·.
+	 * Sets the äººå‘˜åœ°å€.
 	 *
-	 * @param user_add the new ÈËÔ±µØÖ·
+	 * @param user_add the new äººå‘˜åœ°å€
 	 */
 	public void setUser_add(String user_add) {
 		this.user_add = user_add;
 	}
 
 	/**
-	 * Gets the ÈËÔ±ÄêÁä.
+	 * Gets the äººå‘˜å¹´é¾„.
 	 *
-	 * @return the ÈËÔ±ÄêÁä
+	 * @return the äººå‘˜å¹´é¾„
 	 */
 	public int getUser_age() {
 		return user_age;
 	}
 
 	/**
-	 * Sets the ÈËÔ±ÄêÁä.
+	 * Sets the äººå‘˜å¹´é¾„.
 	 *
-	 * @param user_age the new ÈËÔ±ÄêÁä
+	 * @param user_age the new äººå‘˜å¹´é¾„
 	 */
 	public void setUser_age(int user_age) {
 		this.user_age = user_age;
 	}
 
 	/**
-	 * Gets the ±¸×¢ĞÅÏ¢.
+	 * Gets the å¤‡æ³¨ä¿¡æ¯.
 	 *
-	 * @return the ±¸×¢ĞÅÏ¢
+	 * @return the å¤‡æ³¨ä¿¡æ¯
 	 */
 	public String getUser_bz() {
 		return user_bz;
 	}
 
 	/**
-	 * Sets the ±¸×¢ĞÅÏ¢.
+	 * Sets the å¤‡æ³¨ä¿¡æ¯.
 	 *
-	 * @param user_bz the new ±¸×¢ĞÅÏ¢
+	 * @param user_bz the new å¤‡æ³¨ä¿¡æ¯
 	 */
 	public void setUser_bz(String user_bz) {
 		this.user_bz = user_bz;
