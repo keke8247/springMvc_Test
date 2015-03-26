@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE sqlMap      
+    PUBLIC "-//ibatis.apache.org//DTD SQL Map 2.0//EN"      
+    "http://ibatis.apache.org/dtd/sql-map-2.dtd">
+
+<sqlMap namespace="user">
+	<typeAlias alias="userBean" type="com.user.entity.UserBean" />
+  
+  	<resultMap id="userBeanResult" class="userBean">
+		<result property="user_id" column="ID" />
+		<result property="user_name" column="NAME" />
+		<result property="user_sex" column="SEX" />
+		<result property="user_tel" column="TEL" />
+		<result property="user_add" column="ADDRESS" />
+		<result property="user_age" column="AGE" />
+		<result property="user_bz" column="BZ" />
+	</resultMap>
+	
+	<insert id="saveUser" parameterClass="userBean">
+		insert into USER
+		(
+			ID,NAME,SEX,TEL,ADDRESS,AGE,BZ
+		)
+		values
+		(
+			#user_id#,#user_name#,#user_sex#,#user_tel#,#user_add#,#user_age#,#user_bz#
+		)
+  	</insert>
+  	
+  	<select id="loadUserList" parameterClass="java.lang.String" resultMap="userBeanResult">
+   		 SELECT ID,NAME,SEX,TEL,ADDRESS,AGE,BZ FROM USER WHERE NAME like '%$cxmc$%' 
+  	</select>
+  
+  	<delete id="deleteUser" parameterClass="java.lang.String">
+		DELETE FROM USER WHERE ID = '$userId$'
+  	</delete>
+  	
+  	<select id="getUser" parameterClass="java.lang.String" resultMap="userBeanResult">
+   		 SELECT ID,NAME,SEX,TEL,ADDRESS,AGE,BZ FROM USER WHERE ID = '$userId$'
+  	</select>
+  	
+  	<update id="updateUser" parameterClass="userBean">
+  	UPDATE USER SET
+		NAME=#user_name#,
+		SEX=#user_sex#,
+		TEL=#user_tel#,
+		ADDRESS=#user_add#,
+		AGE=#user_age#,
+		BZ=#user_bz#
+		WHERE ID=#user_id#
+  </update>
+  
+</sqlMap>
